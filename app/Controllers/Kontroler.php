@@ -8,6 +8,8 @@ use App\Models\SpolkZeme;
 class Kontroler extends BaseController
 {
     var $spolkZeme;
+    var $Station;
+
     public function __construct(){
         $this->spolkZeme = new spolkZeme();
     }
@@ -19,6 +21,12 @@ class Kontroler extends BaseController
 
     public function getIndividualBundesland($idbundesland){
         $data['spolkZeme'] = $this->spolkZeme->find($idbundesland);
+        echo view('kartaSpolkZeme', $data);
+    }
+
+    public function getStations($idbundesland){
+        $data['Station'] = $this->Station->where('bundesland', $idbundesland)->FindAll();
+        $data['name'] = $this->spolkZeme->find($idbundesland)->name;
         echo view('kartaSpolkZeme', $data);
     }
 }
