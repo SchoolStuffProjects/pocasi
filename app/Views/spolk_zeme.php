@@ -1,7 +1,7 @@
 <?php
 $this->extend('layout/template');
 $this->section('content');
-echo "<h1>Seznam spolkových zemí</h1>";
+echo "<h1>Seznam spolkových zemí - </h1>";
 
 $table = new \CodeIgniter\View\Table();
 

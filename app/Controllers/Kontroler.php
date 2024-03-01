@@ -32,7 +32,7 @@ class Kontroler extends BaseController
 
     public function getIndividualStation($idStation){
         $data['currentStation'] = $this->currentStation->where('Stations_ID', $idStation)->findAll();
-        //$data['currentStationName'] = $this->spolkZeme->find($idStation)->name;
+        //$data['currentStationName'] = $this->spolkZeme->find($idStation)->quality;
         echo view('individualniStanice', $data);
     }
 }
