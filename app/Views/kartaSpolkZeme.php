@@ -10,7 +10,7 @@
     ?>
             <div class = "col-xxl-3 col-sm-12 col-lg-6">
                 <div class="card m-5">
-                    <h4 class="card-title text-center mt-2"><?= $row->place ?></h4>
+                    <h4 class="card-title text-center mt-2"><?= anchor('individualniStanice/'.$row->S_ID, $row->place) ?></h4>
                 <div class="card-body">
                     <p class="card-text text-center"> Zeměpisná šířka: <?= $row->geo_latitude ?></p>
                     <p class="card-text text-center"> Zeměpisná délka: <?= $row->geo_longtitude ?></p>

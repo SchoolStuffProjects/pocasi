@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Data extends Model
+class currentStation extends Model
 {
     protected $table            = 'data';
-    protected $primaryKey       = 'id';
+    protected $primaryKey       = 'Stations_ID';
     protected $useAutoIncrement = false;
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
