@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\SpolkZeme;
+use App\Models\Station;
 
 class Kontroler extends BaseController
 {
@@ -12,6 +13,7 @@ class Kontroler extends BaseController
 
     public function __construct(){
         $this->spolkZeme = new spolkZeme();
+        $this->Station = new Station();
     }
     
     public function getbundesland(){
@@ -20,13 +22,8 @@ class Kontroler extends BaseController
     }
 
     public function getIndividualBundesland($idbundesland){
-        $data['spolkZeme'] = $this->spolkZeme->find($idbundesland);
-        echo view('kartaSpolkZeme', $data);
-    }
-
-    public function getStations($idbundesland){
-        $data['Station'] = $this->Station->where('bundesland', $idbundesland)->FindAll();
         $data['name'] = $this->spolkZeme->find($idbundesland)->name;
+        $data['Station'] = $this->Station->where('bundesland', $idbundesland)->findAll();
         echo view('kartaSpolkZeme', $data);
     }
 }
