@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Struktura tabulky `bundesland`
 --
 
-CREATE TABLE `bundesland` (
+CREATE TABLE `pocasi_bundesland` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL,
   `short_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_czech_ci NOT NULL
@@ -36,7 +36,7 @@ CREATE TABLE `bundesland` (
 -- Vypisuji data pro tabulku `bundesland`
 --
 
-INSERT INTO `bundesland` (`id`, `name`, `short_name`) VALUES
+INSERT INTO `pocasi_bundesland` (`id`, `name`, `short_name`) VALUES
 (1, 'Baden-Würtemberg', 'BW'),
 (2, 'Bayern', 'BY'),
 (3, 'Berlin', 'BE'),
@@ -60,7 +60,7 @@ INSERT INTO `bundesland` (`id`, `name`, `short_name`) VALUES
 -- Struktura tabulky `data`
 --
 
-CREATE TABLE `data` (
+CREATE TABLE `pocasi_data` (
   `Stations_ID` int(11) NOT NULL,
   `date` date NOT NULL,
   `quality` int(11) DEFAULT NULL,
@@ -81,7 +81,7 @@ CREATE TABLE `data` (
 -- Vypisuji data pro tabulku `data`
 --
 
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (102, '2015-08-05', 3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (102, '2015-08-06', 3, NULL, 17.3, 21.3, 28.5, 67.25, 7.1, 12.4, 14.117, NULL, NULL, 1010.37),
 (102, '2015-08-07', 3, NULL, 17, 18.3, 21.4, 86.5, 3.7, 8.5, 9.467, NULL, NULL, 1013.68),
@@ -647,7 +647,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (164, '2015-08-24', 3, 12.7, 14.4, 20.3, 27.1, 64.58, 3.8, 10.2, 5.783, 5.6, 3.4, 1001.95),
 (164, '2015-08-25', 3, 12.3, 13.9, 18, 21.5, 73.67, 4.3, 15.8, 1.65, 6.5, 0, 1005.74),
 (164, '2015-08-26', 3, 11.7, 13.1, 19.7, 25.9, 63.25, 3.6, 10.8, 10.55, 5.9, 0, 1009.63);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (164, '2015-08-27', 3, 13.6, 15.3, 20.1, 27.8, 63.96, 3.3, 9, 4.05, 7.7, 5.5, 1004.65),
 (164, '2015-08-28', 3, 8.5, 11, 15.9, 20.4, 83.58, 3.1, 8.6, 2.467, 5.6, 0, 1010.01),
 (164, '2015-08-29', 3, 7.6, 9.9, 17.1, 24.8, 72.54, 1.7, 6.7, 10.383, 1.2, 0, 1016.99),
@@ -1239,7 +1239,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (183, '2015-10-04', 3, 9.7, 10, 13.4, 15.4, 94.75, 4.1, 7.8, 5.933, 4.8, 0, 1008.35),
 (183, '2015-10-05', 3, 10.1, 11.4, 13.3, 15.9, 87.58, 3.2, 12.9, 2.317, 5.1, 0, 1011.53),
 (183, '2015-10-06', 3, 12.3, 12.8, 13.9, 14.4, 87.33, 7.1, 21.8, 0, 7, 0.1, 1008.66);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (183, '2015-10-07', 3, 10.7, 10.9, 11.8, 12.8, 77.38, 7.2, 18.8, 1.233, 7.6, 0.2, 1011.14),
 (183, '2015-10-08', 3, 7.5, 9.3, 10.6, 11.8, 70, 6.5, 13.5, 0, 7.9, 0.3, 1015.67),
 (183, '2015-10-09', 3, 6.6, 9.1, 10.3, 11.8, 57.83, 5.4, 13.9, 3.133, 6, 0, 1019.96),
@@ -1835,7 +1835,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (232, '2015-11-18', 3, 3.6, 8.5, 13.4, 15.8, 64.08, 7.9, 19, 4.833, 2.8, 0, 962.6),
 (232, '2015-11-19', 3, 6.9, 9.3, 13.1, 15.5, 61.25, 8.2, 21.6, 3.667, 7.8, 12.4, 962.13),
 (232, '2015-11-20', 3, 2.9, 3.3, 8.3, 14.8, 89.58, 4.7, 17.8, 0, 7.5, 49.3, 950.98);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (232, '2015-11-21', 3, -2.2, 0.1, 2.7, 5.8, 85.21, 3.6, 13.6, 4.6, 5.9, 1.2, 943.01),
 (232, '2015-11-22', 3, -2.7, -1.2, 0.4, 1.7, 85.67, 4.3, 9.2, 0.383, 7.6, 0.8, 950.35),
 (232, '2015-11-23', 3, -6, -3.5, -0.1, 3.3, 85.46, 3.3, 8.8, 3.333, 4.9, 0, 964.41),
@@ -2437,7 +2437,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (282, '2016-01-08', 3, -3.9, -2.1, 2.6, 6.4, 84.79, 2.2, 9.6, 5.15, 4.8, 0, 976.94),
 (282, '2016-01-09', 3, -1.6, -0.8, 1.7, 4.3, 96.38, 0.7, 3.9, 0, 7.9, 0, 976.01),
 (282, '2016-01-10', 3, 2.3, 3.7, 5.5, 7.5, 93.63, 3, 10.2, 0, 7.5, 3.2, 970.06);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (282, '2016-01-11', 3, 2.2, 3.9, 4.9, 6.1, 94.33, 2.5, 10.5, 0, 7.4, 6.2, 964.53),
 (282, '2016-01-12', 3, 2.8, 4, 4.9, 5.8, 87.67, 3.4, 9.8, 0.167, 7.3, 5.1, 969.37),
 (282, '2016-01-13', 3, 1.5, 2.4, 4.2, 6.4, 85.75, 5.2, 13.8, 1.483, 7, 4.4, 981.21),
@@ -3029,7 +3029,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (403, '2016-02-18', 3, -2.8, -0.7, 2.3, 5.9, 86.54, NULL, NULL, 1.817, 6.9, 0, 1006.7),
 (403, '2016-02-19', 3, -1.2, 1.3, 3.2, 5.2, 76.25, NULL, NULL, 1.717, 7.3, 0, 1008.25),
 (403, '2016-02-20', 3, -3.6, -0.4, 3.1, 5.3, 88.83, NULL, NULL, 0, 6.5, 6.5, 1001.6);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (403, '2016-02-21', 3, 4.2, 5.1, 8.1, 11.2, 93.88, NULL, NULL, 0.15, 7.7, 10.9, 994.29),
 (403, '2016-02-22', 3, 2.8, 3.6, 6.8, 11.1, 93.7, NULL, NULL, 0, 7.9, 7.9, 992.26),
 (403, '2016-02-23', 3, 0.4, 2.5, 4.5, 7.4, 82.04, NULL, NULL, 2.55, 6, 0, 998.28),
@@ -3617,7 +3617,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (430, '2016-03-26', 3, 3.5, 6, 9.3, 13.6, 72.08, 3.1, 7.7, 9.683, 4.4, 0, 1013),
 (430, '2016-03-27', 3, 2.1, 4.5, 9.1, 16, 67.92, 4.6, 11.1, 6.967, 6.7, 0, 1007.14),
 (430, '2016-03-28', 3, -0.8, 4.3, 10.5, 16.3, 63.04, 4.4, 14.4, 7.083, 5.7, 5.3, 1001.46);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (430, '2016-03-29', 3, -1.1, 3, 7.2, 10.7, 82.29, 5.2, 18, 1.667, 6.3, 4.7, 1001.34),
 (430, '2016-03-30', 3, -1.8, 3.1, 7.3, 11.6, 76.33, 4.3, 12.7, 1.733, 5.8, 0.6, 1005.05),
 (430, '2016-03-31', 3, -0.5, 3.2, 7.5, 11, 68.75, 2, 6.9, 0.117, 7.3, 0, 1009.15),
@@ -4206,7 +4206,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (433, '2016-05-03', 3, -0.6, 6.4, 12.5, 19.8, 62.67, 3.4, 15.5, 4.6, NULL, 0.7, 1012.87),
 (433, '2016-05-04', 3, -0.3, 7.3, 10.2, 14.4, 67.92, 4.8, 10.8, 2.783, NULL, 0, 1020.94),
 (433, '2016-05-05', 3, 1.1, 7.4, 13.9, 20.4, 52.21, 2.2, 6.6, 12.467, NULL, 0, 1021.17);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (433, '2016-05-06', 3, 0.9, 8.1, 17.1, 23.6, 48.54, 3.2, 10.4, 14.167, NULL, 0, 1014.66),
 (433, '2016-05-07', 3, 1.3, 10.1, 18.3, 24.7, 42.63, 4, 11.9, 13.817, NULL, 0, 1012.06),
 (433, '2016-05-08', 3, 2.1, 10.8, 18.4, 24.2, 45.67, 4.5, 12.6, 12.833, NULL, 0, 1013.85),
@@ -4794,7 +4794,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (691, '2016-06-09', 3, 6.7, 8.1, 15.5, 21.7, 75.08, 4.4, 11.5, 8.8, 5.4, 0, 1017.09),
 (691, '2016-06-10', 3, 5.5, 6.9, 13.9, 20.1, 70.25, 4.2, 9.8, 8.317, 5.5, 0, 1012.69),
 (691, '2016-06-11', 3, 9.2, 9.5, 16.2, 21.6, 64.17, 1.9, 7, 6.567, 6.9, 0.1, 1011.17);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (691, '2016-06-12', 3, 12.2, 12.9, 15.7, 18.5, 73.5, 3.2, 6.7, 0.15, 7.5, 2.4, 1008.12),
 (691, '2016-06-13', 3, 11, 12.9, 15.5, 18.8, 90.29, 2.6, 7, 0.233, 7, 2.5, 1000.67),
 (691, '2016-06-14', 3, 10.2, 11.7, 15.2, 19.5, 89.79, 2.3, 9.9, 1.2, 6.9, 5.8, 997.7),
@@ -5387,7 +5387,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (722, '2016-07-21', 3, 12, 16, 17.9, 21.6, 73.17, 6.5, 11.6, 4.117, 6.8, 0, 887.34),
 (722, '2016-07-22', 3, 6.9, 13.2, 16.7, 21.7, 75.79, 5, 13, 3.867, 5.6, 1.1, 889.34),
 (722, '2016-07-23', 3, 11.3, 14.2, 15.7, 18.2, 60.83, 6.2, 10.6, 1.383, 7.4, 0, 890.38);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (722, '2016-07-24', 3, 7, 15.1, 16.7, 19, 69.71, 3.5, 9.5, 3.833, 5.9, 0, 891.19),
 (722, '2016-07-25', 3, 8.1, 13.7, 17.4, 21.4, 72.67, 3.7, 10.1, 3.533, 6.8, 3.3, 890.78),
 (722, '2016-07-26', 3, 9.7, 12.7, 15, 19.1, 85.08, 4.6, 9.5, 6.517, 7.1, 6.5, 891.33),
@@ -5981,7 +5981,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (880, '2016-09-02', 3, 9.6, 11.7, 18.2, 25.9, 70.13, 1.3, 5, 10.733, 5.7, 0, 1010.91),
 (880, '2016-09-03', 3, 11.5, 13.5, 20.6, 27.7, 60.83, 2.1, 10, 9.983, 7.7, 0, 1007.28),
 (880, '2016-09-04', 3, 12.6, 15.6, 19.2, 25.6, 73.67, 3.1, 10.3, 3.15, 7.4, 5.3, 1001.83);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (880, '2016-09-05', 3, 10.5, 12.3, 16.4, 20.6, 86.96, 2.3, 7.9, 2.5, 6.2, 3.8, 1006.05),
 (880, '2016-09-06', 3, 8.2, 9.6, 14.8, 22.3, 82.17, 1.3, 5.5, 5.8, 4.2, 0, 1018.25),
 (880, '2016-09-07', 3, 7.8, 9.4, 18.4, 26.7, 73.54, 1.7, 6, 11.867, 4, 0, 1014.98),
@@ -6572,7 +6572,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (891, '2016-10-12', 3, 7.7, 8.7, 9.8, 11.2, 81.88, 8.5, 14.2, 2.25, 7, 0.1, 1022.6),
 (891, '2016-10-13', 3, 7.1, 7.6, 9.1, 11.4, 78.21, 9.8, 15.8, 0.417, 7.5, 0, 1020.81),
 (891, '2016-10-14', 3, 6.8, 7.3, 8.8, 10.5, 79.79, 12.6, 18.4, 0.3, 7.4, 0.2, 1013.09);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (891, '2016-10-15', 3, 7.1, 8, 9.7, 11.1, 87.21, 8.5, 18.5, 0, 7.9, 0.4, 1011.13),
 (891, '2016-10-16', 3, 7.6, 8, 11.2, 13.8, 94.83, 4.8, 11.8, 2.85, 6.5, 0, 1020.07),
 (891, '2016-10-17', 3, 9.6, 10.7, 12.2, 14.4, 90.38, 4, 10.1, 0, 7.8, 0.2, 1019.43),
@@ -7142,7 +7142,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1048, '2015-09-06', 3, 8.7, 9.8, 11.8, 15.2, 80.5, 8.3, 18.3, 0.683, 6.8, 0.8, 987.54),
 (1048, '2015-09-07', 3, 6.1, 9.3, 11.8, 16, 79.25, 4.1, 11.3, 2.283, 6, 1, 993.38),
 (1048, '2015-09-08', 3, 5, 8.1, 13, 17.3, 72.38, 3.3, 9.3, 7.367, 5.1, 0, 995.25);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1048, '2015-09-09', 3, 5, 7.7, 12.2, 17.4, 79.71, 2.9, 8.7, 9.65, 3.6, 0, 996.18),
 (1048, '2015-09-10', 3, 5.9, 8.2, 11.3, 17.5, 87.88, 2.8, 13.4, 4.65, 5.2, 0.9, 995.97),
 (1048, '2015-09-11', 3, 4.2, 6.2, 12.6, 17.7, 88.13, 3.2, 9.6, 3.2, 3.8, 0, 992.66),
@@ -7731,7 +7731,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1078, '2015-10-14', 3, 0.4, 1.6, 3.4, 4.5, 88.83, 3.4, 8.2, 0, 7.5, 5.5, 1014.24),
 (1078, '2015-10-15', 3, -0.6, 1.1, 4.5, 6.9, 95.33, 2.6, 6.7, 0, 7.3, 10.4, 1012.83),
 (1078, '2015-10-16', 3, 5.6, 5.7, 6.6, 7.7, 93.83, 2.6, 5.7, 0, 8, 9.7, 1013.2);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1078, '2015-10-17', 3, 2, 3.9, 6.6, 8.6, 89.5, 2.8, 6.5, 0, 7.2, 0, 1013.23),
 (1078, '2015-10-18', 3, 4.7, 5.5, 7.8, 10.7, 86.88, 1.6, 4.5, 1.85, 7.2, 0.6, 1014.65),
 (1078, '2015-10-19', 3, 2.2, 4.3, 8.4, 11.2, 94.92, 1.2, 3.1, 0.033, 6.3, 0, 1016.98),
@@ -8306,7 +8306,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1228, '2015-12-07', 3, NULL, 9.4, 10.1, 10.8, 87.71, 5.5, 11.6, 0, NULL, NULL, 1027.6),
 (1228, '2015-12-08', 3, NULL, 10, 10.6, 11.4, 90.25, 10.8, 16.1, 4.45, NULL, NULL, 1023.57),
 (1228, '2015-12-09', 3, NULL, 9, 9.8, 11.1, 78.75, 12.6, 21, 4.7, NULL, NULL, 1028.05);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1228, '2015-12-10', 3, NULL, 7.4, 8.9, 9.6, 89.74, 16.6, 23.3, 0, NULL, NULL, 1021.84),
 (1228, '2015-12-11', 3, NULL, 6.7, 8.8, 10, 74.5, 13.5, 24.1, 1.183, NULL, NULL, 1013.97),
 (1228, '2015-12-12', 3, NULL, 5.4, 8.7, 11.8, 77.75, 12.6, 23.2, 1.233, NULL, NULL, 1012.77),
@@ -8877,7 +8877,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1262, '2016-02-06', 3, -5.8, -3.7, 3.2, 11.9, 87.46, 1.8, 5.7, 7.4, 4.8, 0, 965.66),
 (1262, '2016-02-07', 3, -5.9, -3.4, 4.2, 12.5, 82.33, 3, 11.5, 2.15, 6.5, 0, 955.34),
 (1262, '2016-02-08', 3, -0.8, 1.7, 7.4, 13, 69.63, 5.5, 22.3, 2.967, 6.6, 2.4, 955.58);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1262, '2016-02-09', 3, 3.1, 4.9, 8.1, 11.2, 72.83, 5.4, 25.7, 0.3, 7.2, 0.5, 947.97),
 (1262, '2016-02-10', 3, 0, 0.3, 3, 6.3, 73.58, 8.5, 18.7, 0.533, 7.8, 2.5, 946.35),
 (1262, '2016-02-11', 3, -7.3, -4.9, 2.1, 6.4, 71.71, 6.5, 16.6, 3.767, 5.5, 0.1, 954.23),
@@ -9470,7 +9470,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1270, '2016-03-19', 3, 2.3, 2.5, 3.8, 5.5, 82.58, 2.3, 5.6, 0, 8, 0, 981.34),
 (1270, '2016-03-20', 3, 0.8, 2.5, 4.1, 5.9, 78.71, 4.6, 9.1, 0.017, 7.7, 0.2, 978.91),
 (1270, '2016-03-21', 3, 2, 2.8, 4.9, 7.6, 83, 5.1, 11.9, 0.55, 7.5, 0.4, 977.23);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1270, '2016-03-22', 3, 0.8, 2.5, 4.2, 6.4, 86.13, 4.2, 10.4, 0, 7.6, 0.1, 973.74),
 (1270, '2016-03-23', 3, 1.4, 2.5, 4.5, 7.7, 83.88, 3.7, 10.7, 0.05, 7.3, 0.1, 971.26),
 (1270, '2016-03-24', 3, -1.9, -0.3, 4.4, 8.3, 70.42, 3.7, 8.6, 5.283, 5.9, 0.1, 975.1),
@@ -10063,7 +10063,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1346, '2016-04-30', 3, 0, -1.2, 2.5, 7.3, 78, 5.2, 14.1, 4.45, 5.5, 13.4, 846.91),
 (1346, '2016-05-01', 3, 0, -1.9, 0, 2.4, 100, 8.3, 24.8, 0, 7.9, 7.3, 848.55),
 (1346, '2016-05-02', 3, 0, 1.5, 3.9, 6.4, 91.83, 6.8, 18.3, 8.417, 4.5, 0, 852.97);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1346, '2016-05-03', 3, 0, -0.7, 1.9, 4.8, 89.75, 6.6, 16.5, 3.4, 5.3, 10.8, 853.17),
 (1346, '2016-05-04', 3, 0, -1.2, 1.7, 5.7, 80.42, 5.2, 15.2, 6.15, 3.9, 0, 855.93),
 (1346, '2016-05-05', 3, 0, -1, 3.9, 8.6, 64.96, 11.7, 22.9, 13.95, 1, 0, 851.66),
@@ -10654,7 +10654,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1358, '2016-06-09', 3, 6.5, 7.1, 8.7, 12.8, 92.63, 5.7, 10.2, 3.483, 6.9, 0, 878.85),
 (1358, '2016-06-10', 3, 6.1, 7, 10.1, 14.6, 76.71, 6, 11.7, 8.167, 5.4, 0, 875.93),
 (1358, '2016-06-11', 3, 5, 7.7, 9.2, 10.9, 80.58, 2.7, 9.4, 0.017, 7, 4.1, 875.31);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1358, '2016-06-12', 3, 7.2, 7.7, 9.7, 13.2, 94.46, 5.1, 9.3, 0.483, 7.7, 12.7, 872.99),
 (1358, '2016-06-13', 3, 7.6, 7.9, 9.5, 14, 96.13, 7.9, 14, 1.35, 7.5, 4.6, 867.58),
 (1358, '2016-06-14', 3, 7.4, 7.3, 10, 14.5, 89.21, 6.3, 11.2, 6.45, 7.1, 3.7, 866.21),
@@ -11243,7 +11243,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1420, '2016-07-17', 3, 16.3, 16.7, 22.6, 28.2, 65.17, 3.1, 12.2, 6.667, 5.5, 0, 1009.38),
 (1420, '2016-07-18', 3, 14.6, 16.2, 23.1, 29.7, 59.5, 2.1, 8.2, 12.917, 2.2, 0, 1009.2),
 (1420, '2016-07-19', 3, 12.9, 14.4, 24.2, 32, 54.75, 1.8, 6.3, 14.7, 0.8, 0, 1008.07);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1420, '2016-07-20', 3, 18.6, 20.2, 27.1, 35.5, 49.29, 2.5, 10.1, 13.15, 1.5, 4, 1002.66),
 (1420, '2016-07-21', 3, 18.5, 18.8, 21.6, 26.3, 82.13, 2.6, 11.3, 2.967, 7.3, 4.6, 1003.53),
 (1420, '2016-07-22', 3, 17.2, 17.6, 23.1, 31.1, 73.96, 2.6, 15.6, 6.983, 6.5, 15.6, 1003.3),
@@ -11833,7 +11833,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1468, '2016-08-25', 3, 9.4, 12.4, 21.8, 29.8, 64, 2.4, 5.3, 12.967, 0, 0, 928.03),
 (1468, '2016-08-26', 3, 14.6, 16.8, 24.4, 31, 56.63, 2.8, 7.7, 12.917, 1, 0, 928.24),
 (1468, '2016-08-27', 3, 13.7, 16.3, 24, 31, 57.5, 2.1, 6.9, 9.333, 2.7, 0.2, 928.2);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1468, '2016-08-28', 3, 16.2, 17.7, 23.6, 29.1, 54.08, 4.2, 15, 10.65, 4, 0, 927.15),
 (1468, '2016-08-29', 3, 11.6, 13.8, 17.4, 21.5, 70.75, 4, 9.4, 6.8, 7.2, 0, 929.07),
 (1468, '2016-08-30', 3, 9.2, 12, 16.6, 22.2, 70.83, 3.1, 9.1, 9.367, 4.6, 0, 931.36),
@@ -12420,7 +12420,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1504, '2016-09-30', 3, NULL, NULL, 14.2, NULL, 76.58, NULL, NULL, 0.2, 7.2, 1.1, 993.28),
 (1504, '2016-10-01', 3, NULL, NULL, 12.1, NULL, 93.38, NULL, NULL, 0, NULL, 4.3, 988.95),
 (1504, '2016-10-02', 3, NULL, NULL, 12.3, NULL, 81, NULL, NULL, 4.9, NULL, 1.1, 991.16);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1504, '2016-10-03', 3, NULL, NULL, 11.4, NULL, 82.13, NULL, NULL, 2.4, NULL, 0, 1001.68),
 (1504, '2016-10-04', 3, NULL, NULL, 12.1, NULL, 71.75, NULL, NULL, 4.1, 4.7, 0, 1010.32),
 (1504, '2016-10-05', 3, NULL, NULL, 8.7, NULL, 68.96, NULL, NULL, 4.5, 4.5, 0, 1009.98),
@@ -13012,7 +13012,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1612, '2016-11-10', 1, 0, 0.1, 1.3, 2.2, 95.08, 3.5, 8.8, 0, 7.4, 0.7, 968.21),
 (1612, '2016-11-11', 1, -2.2, -1, 1, 2.4, 95.42, 3.6, 9, 0, 7.9, 0, 978.44),
 (1612, '2016-11-12', 1, -2.4, -1.3, -0.7, 0.2, 84.42, 2.6, 6.6, 0, 7.3, 0, 988);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1612, '2016-11-13', 1, -6.6, -4.5, -1.2, 2.6, 80.5, 3.1, 6, 7.733, 4.4, 0, 991.25),
 (1612, '2016-11-14', 1, -8.9, -6, -1.6, 3.7, 79.38, 2.8, 9.1, 7.9, 2.6, 0, 995.37),
 (1612, '2016-11-15', 1, -1.2, -0.4, 1, 3.2, 86.75, 7.4, 14.1, 0, 7.6, 7.3, 988.02),
@@ -13604,7 +13604,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1684, '2015-06-20', 3, 9.2, 9.3, 11.1, 15.6, 87.75, 3, 11.2, 3.4, 7.2, 12, 987.33),
 (1684, '2015-06-21', 3, 8, 9.6, 12.8, 16.9, 77.92, 3.2, 8, 3.633, 7.1, 1.8, 987.87),
 (1684, '2015-06-22', 3, 10.5, 11.1, 13.4, 17.9, 86.04, 4.3, 12.4, 0.8, 7.8, 7.3, 981.73);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1684, '2015-06-23', 3, 5.9, 7.3, 11.2, 14.4, 83.79, 4.8, 12.9, 3.917, 5.8, 1.6, 980.44),
 (1684, '2015-06-24', 3, 4.6, 7.4, 11.5, 15.3, 80.25, 3.6, 11.8, 0.8, 5.5, 0, 991.63),
 (1684, '2015-06-25', 3, 3.3, 4.9, 15.1, 21, 70.46, 1.7, 6.2, 8.433, 4.8, 0, 994.67),
@@ -14194,7 +14194,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1757, '2015-07-29', 3, 10.8, 11.8, 14.7, 20.1, 72.21, 4.4, 16.3, 5.867, 4.8, 3.2, 1002.22),
 (1757, '2015-07-30', 3, 11.4, 11.9, 13.9, 16.5, 82.83, 6.5, 15, 0.033, 8, 2.4, 1005.08),
 (1757, '2015-07-31', 3, 5.7, 8.1, 13.6, 17.4, 72.88, 4.7, 11.9, 3.867, 5.8, 0, 1015.36);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1757, '2015-08-01', 3, 5.3, 7.5, 13.6, 19.3, 75.54, 2.9, 9.4, 12.2, 4.8, 0, 1018.46),
 (1757, '2015-08-02', 3, 8.8, 11.2, 18, 27.4, 71.75, 2.1, 8.6, 11.2, 5.1, 0, 1018.85),
 (1757, '2015-08-03', 3, 8.5, 10.2, 18, 24, 76.33, 3.3, 10.2, 14.05, 1.4, 0, 1019.25),
@@ -14780,7 +14780,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1766, '2015-09-02', 3, 8.8, 10.3, 14.1, 18.6, 76.46, 3.1, 9.1, 8.1, 3.6, 0.1, 1009.86),
 (1766, '2015-09-03', 3, 9.3, 10.9, 14, 18.3, 77.88, 2.5, 8.7, 5.95, 5.5, 0, 1007.79),
 (1766, '2015-09-04', 3, 9, 10.6, 13.8, 17.8, 78.38, 5.7, 14.9, 6.567, 5.6, 4.5, 1006.13);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1766, '2015-09-05', 3, 8.6, 9.9, 13.1, 16.5, 82.54, 5.4, 16.1, 2.667, 5.5, 2.4, 1007.56),
 (1766, '2015-09-06', 3, 8.2, 9.4, 12.8, 16.8, 78.04, 6, 13.9, 5.267, 6, 2.5, 1014.22),
 (1766, '2015-09-07', 3, 7.4, 10.1, 13.8, 17.6, 89.13, 3.3, 8.2, 1.7, 6.8, 2, 1018.01),
@@ -15365,7 +15365,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1832, '2015-10-06', 3, NULL, 6.9, 9.5, 12.6, 88.5, 6, 14.4, 1.483, NULL, 12.8, 850.15),
 (1832, '2015-10-07', 3, NULL, 6.2, 8, 9.1, 100, 4.3, 12.6, 0, NULL, 25, 852.25),
 (1832, '2015-10-08', 3, NULL, 4.7, 5.7, 6.5, 100, 5.8, 12.1, 0, NULL, 0, 856.36);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1832, '2015-10-09', 3, NULL, 3.9, 5.7, 8, 96.75, 2.2, 4.5, 2.25, NULL, 0, 857.22),
 (1832, '2015-10-10', 3, NULL, 1.5, 3.9, 5.4, 99.17, 4.4, 12, 0, NULL, 0, 854.1),
 (1832, '2015-10-11', 3, NULL, -3.5, 0.5, 3.5, 78.42, 6.6, 11.7, 5.717, NULL, 0, 851.36),
@@ -15944,7 +15944,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (1975, '2015-11-03', 3, 2.3, 1.8, 3.7, 5.6, 98.29, 2.2, 6.2, 1.717, 7.5, 0, 1020.33),
 (1975, '2015-11-04', 3, 1.1, 1.5, 6.2, 11.2, 89.58, 2.4, 5.1, 6.767, 5.3, 0, 1017.59),
 (1975, '2015-11-05', 3, 5, 7.5, 11.3, 14.7, 89.88, 2.3, 5.1, 1.1, 6.9, 4.8, 1018);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (1975, '2015-11-06', 3, 10.8, 11.3, 13.1, 14.7, 94.79, 3.4, 8.1, 0, 7.8, 10.3, 1016.07),
 (1975, '2015-11-07', 3, 13.4, 13.7, 15.5, 17.2, 90.08, 5.5, 20.9, 0.333, 7.5, 2.8, 1016.03),
 (1975, '2015-11-08', 3, 8.5, 10.7, 12.4, 14.9, 82.46, 5.1, 16.6, 5.883, 5.2, 3.7, 1021.13),
@@ -16529,7 +16529,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2014, '2015-12-07', 3, 6, 8.8, 11, 11.8, 87.21, 3.2, 9.6, 0, 7, 0, 1023.1),
 (2014, '2015-12-08', 3, 2.7, 6.8, 9.7, 13, 77.17, 3.6, 10.5, 6.233, 2.3, 0.7, 1021.68),
 (2014, '2015-12-09', 3, 0.1, 4.3, 7.6, 10.1, 82.54, 4.2, 11.7, 3.833, 4.3, 0, 1025.2);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2014, '2015-12-10', 3, -0.7, 3, 4.8, 7.4, 75.17, 5.1, 10.8, 5.867, 4.3, 1.9, 1023.2),
 (2014, '2015-12-11', 3, 1.1, 3.3, 5.9, 8, 82.67, 6.2, 15.4, 0, 7.3, 2.9, 1012.69),
 (2014, '2015-12-12', 3, 0.9, 4.3, 5.7, 9.9, 83.25, 4.8, 14.9, 3.6, 5.7, 7.6, 1011.32),
@@ -17112,7 +17112,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2115, '2016-01-08', 3, 0.1, 1.6, 5.3, 7, 80.63, 12.4, 26.5, 0, 7.1, 0.4, 993.59),
 (2115, '2016-01-09', 3, 3.1, 3.9, 4.8, 5.7, 84.88, 9.6, 13.5, 1.65, 6.3, 1.4, 998.51),
 (2115, '2016-01-10', 3, 3.9, 4.4, 5.9, 7.4, 86.33, 11.2, 20.5, 0.167, 7.3, 2, 989.53);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2115, '2016-01-11', 3, 3.9, 4, 5.1, 6.2, 89.38, 9.9, 14.3, 0.65, 6.8, 2, 987.15),
 (2115, '2016-01-12', 3, 4.8, 5.1, 5.9, 7, 89.88, 9, 14.7, 2.05, 7, 0.8, 988.55),
 (2115, '2016-01-13', 3, 2.7, 3, 4.8, 6, 83.96, 7.4, 15.6, 1.067, 7.1, 2, 1004.26),
@@ -17699,7 +17699,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2261, '2016-02-13', 3, -7.4, -4.1, -0.8, 1, 89.29, 2.9, 8.2, 0.117, 7, 6.5, 926.59),
 (2261, '2016-02-14', 3, 0.3, 0.9, 3.6, 5.9, 89.13, 3, 11.2, 0, 7.7, 0.5, 923.74),
 (2261, '2016-02-15', 3, -1.6, -0.9, 1.6, 3.4, 90.13, 2.6, 8.4, 0.15, 7.5, 0.5, 943.24);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2261, '2016-02-16', 3, -4.8, -3.2, -2.6, -0.9, 89.33, 3.8, 9.9, 0, 7.7, 0, 963.59),
 (2261, '2016-02-17', 3, -4.1, -3.1, -1.6, -0.6, 90.58, 2.9, 9.4, 0, 7.6, 1.9, 952.92),
 (2261, '2016-02-18', 3, -4.7, -2.2, 0.4, 3.7, 84.92, 2.1, 7.1, 1.833, 7.8, 0, 948.56),
@@ -18291,7 +18291,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2290, '2016-03-25', 3, 0.8, 0.8, 1.8, 5.1, 88.5, 6.6, 17.7, 0, 7.8, 12.4, 901.35),
 (2290, '2016-03-26', 3, 1.7, 1.5, 5.1, 11.4, 81.96, 4, 12.2, 7.117, 4.8, 0, 904.55),
 (2290, '2016-03-27', 3, 2.1, 2.2, 7.7, 15.5, 59.83, 4.5, 17.1, 6.8, 5.8, 1.7, 900.33);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2290, '2016-03-28', 3, 1.1, 2.7, 7, 12.4, 68.13, 3.5, 12.4, 7, 5.5, 0.1, 896.34),
 (2290, '2016-03-29', 3, 2.6, 3, 6.6, 11.7, 72.79, 6.8, 27.1, 6.8, 6.3, 1.2, 899.54),
 (2290, '2016-03-30', 3, 4.5, 5, 9.5, 14.6, 71.25, 5.3, 14.2, 2.017, 7.4, 0, 900.8),
@@ -18884,7 +18884,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2483, '2016-05-06', 3, 5.2, 7, 12.8, 18.4, 61.67, 7.6, 14.1, 13.783, 4, 0, 917.74),
 (2483, '2016-05-07', 3, 6.3, 10.5, 14.9, 19.6, 47.88, 5.6, 12.7, 13.133, 0.8, 0, 915.55),
 (2483, '2016-05-08', 3, 7.6, 10.5, 13.8, 17.7, 50.5, 7.6, 15.8, 14.167, 0, 0, 916.27);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2483, '2016-05-09', 3, 6.7, 8.5, 13.4, 18.1, 63.04, 7, 14.8, 13.883, 2.7, 0, 916.85),
 (2483, '2016-05-10', 3, 9.1, 10.6, 14.2, 18.8, 61.42, 5.2, 10.7, 8.75, 8, 0.9, 913.57),
 (2483, '2016-05-11', 3, 9.2, 10.6, 13.9, 18.6, 70.88, 5.7, 13.8, 11.067, 7.5, 0, 909.08),
@@ -19477,7 +19477,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2559, '2016-06-17', 3, 6.6, 6.9, 12.3, 18.9, 76.58, 3.3, 13.6, 7.383, 5.2, 0.1, 930.88),
 (2559, '2016-06-18', 3, 8.8, 10.7, 13.7, 18.9, 74.5, 2.1, 7.7, 1.517, 7.3, 13.1, 937.47),
 (2559, '2016-06-19', 3, 10.1, 10.2, 11.8, 15.2, 89.42, 1.1, 3.5, 0.383, 7.7, 14, 941.25);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2559, '2016-06-20', 3, 10.2, 10.7, 15.3, 21, 72.17, 1.1, 4.8, 8.933, 5.2, 1.1, 940.9),
 (2559, '2016-06-21', 3, 12.1, 12.6, 16.2, 20.8, 81.33, 2.3, 7.9, 0.567, 7.7, 0.1, 941.98),
 (2559, '2016-06-22', 3, 13.3, 15, 21.5, 28.7, 70.38, 1.6, 4.9, 13.05, 2.3, 0, 943.19),
@@ -20065,7 +20065,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2564, '2016-07-24', 3, 13.4, 15.6, 21.7, 26.5, 75.75, 2.5, 6.8, 12.55, 2.4, 0, 1015.87),
 (2564, '2016-07-25', 3, 16.3, 17.3, 21.7, 27.4, 80.42, 2.1, 8.7, 4.583, 6.3, 2.4, 1014.09),
 (2564, '2016-07-26', 3, 13.7, 16.1, 19.2, 23.3, 72, 2.9, 9.1, 11.667, 3.9, 0, 1016.27);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2564, '2016-07-27', 3, 14.6, 16.2, 18.9, 23, 81.79, 1.9, 10.6, 3.833, 6.5, 4.9, 1012.49),
 (2564, '2016-07-28', 3, 13, 14.8, 19, 23.7, 72.71, 2.2, 6.9, 10.917, 4.9, 0, 1010.63),
 (2564, '2016-07-29', 3, 15.3, 16.7, 19.1, 23.6, 84.25, 2.2, 8.9, 3.083, 7.3, 4, 1006.35),
@@ -20652,7 +20652,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2667, '2016-08-29', 3, 10.4, 12.6, 17.9, 21.9, 81.08, 2.2, 9.8, 1.6, 5.8, 0.3, 1008.15),
 (2667, '2016-08-30', 3, 7.2, 9.4, 16.9, 24.1, 73.88, 1.9, 6.2, 10.767, 2.8, 0, 1013.07),
 (2667, '2016-08-31', 3, 7.1, 8.8, 18.4, 27.5, 66.79, 2.3, 6.2, 10.167, 3, 0, 1009.23);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2667, '2016-09-01', 3, 10.3, 11.8, 18.5, 25.7, 75.25, 2.1, 7.4, 8.017, 3.7, 0, 1010.56),
 (2667, '2016-09-02', 3, 8.7, 11, 19.2, 27.2, 71.58, 2.5, 7.2, 9.167, 4.8, 0, 1008.7),
 (2667, '2016-09-03', 3, 11.2, 12.8, 19.1, 26.4, 73.08, 1.8, 5.1, 6.783, 5.7, 1.6, 1005.84),
@@ -21244,7 +21244,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2712, '2016-10-09', 3, 4.5, 5.6, 8.3, 13.2, 81.17, 1.8, 11.1, 1.283, 7.1, 0, 969.79),
 (2712, '2016-10-10', 3, 1.4, 3.6, 7.4, 11.6, 79.71, 1.9, 6.1, 2.55, 6.4, 0, 968.88),
 (2712, '2016-10-11', 3, 4.5, 6.2, 8.3, 13.3, 70.25, 2.4, 10.8, 4.017, 6.7, 0, 964.76);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2712, '2016-10-12', 3, 1.8, 4.4, 7.9, 12.7, 70.75, 2.3, 7.9, 7.683, 3.1, 0, 963.96),
 (2712, '2016-10-13', 3, 1.7, 3.7, 7, 11.5, 78.04, 2, 6.9, 3.317, 4, 0, 960.12),
 (2712, '2016-10-14', 3, 2.9, 4.7, 7.9, 11.4, 87.42, 1.7, 7.8, 0.383, 3.3, 0, 955.38),
@@ -21834,7 +21834,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2812, '2016-11-17', 1, 9.2, 9.8, 11.7, 13.8, 80.54, 6.3, 14.8, 2.967, 5.7, 0.3, 994.63),
 (2812, '2016-11-18', 1, 7.4, 8.3, 11.7, 15.5, 76.79, 6.7, 17.3, 0, 7.3, 1.3, 987.85),
 (2812, '2016-11-19', 1, 1.6, 3.5, 7.1, 9.4, 82.46, 3.5, 10, 1.4, 5.6, 4.2, 992.16);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2812, '2016-11-20', 1, 0.1, 1.6, 9.8, 18.2, 67.5, 3.6, 13.5, 6.383, 3.3, 0, 986.79),
 (2812, '2016-11-21', 1, 2.8, 4.3, 7.8, 10.4, 82.83, 1.7, 7.7, 0, 5.6, 0, 985.47),
 (2812, '2016-11-22', 1, 3.1, 4.7, 9, 12.9, 89.79, 1.6, 4.5, 0.4, 6.1, 0, 993.27),
@@ -22420,7 +22420,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (2961, '2015-06-21', 3, NULL, 10.7, 12.8, 15, 75.5, 5.4, 9.9, 4.633, NULL, NULL, 1010.85),
 (2961, '2015-06-22', 3, NULL, 10.6, 12.8, 14.4, 81.46, 5.6, 13.4, 5.35, NULL, NULL, 1002.7),
 (2961, '2015-06-23', 3, NULL, 11.1, 13.9, 17.8, 78.04, 5, 15.2, 9.25, NULL, NULL, 1003.64);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (2961, '2015-06-24', 3, NULL, 9.8, 12.2, 13.9, 82.29, 10, 17, 1.267, NULL, NULL, 1012.89),
 (2961, '2015-06-25', 3, NULL, 11.3, 13.6, 18.2, 81.75, 4.6, 12.6, 6.267, NULL, NULL, 1017.41),
 (2961, '2015-06-26', 3, NULL, 12.4, 15, 17.1, 78.29, 3.1, 6, 5.467, NULL, NULL, 1015.61),
@@ -22977,7 +22977,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3015, '2015-07-02', 3, 14.4, 15.2, 23.1, 29, 46.33, 3.7, 10.2, 15.517, 0.2, 0, 1012.43),
 (3015, '2015-07-03', 3, 16.8, 18, 26.3, 32.9, 39.79, 3.6, 8.8, 14.95, 2, 0, 1012.02),
 (3015, '2015-07-04', 3, 20.8, 21.5, 29.1, 36.5, 38.79, 2.5, 6.1, 13.317, 3.2, 0.9, 1007.9);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3015, '2015-07-05', 3, 20.2, 20.9, 29, 35.7, 49.21, 2.8, 12.8, 10.967, 5, 4.8, 1003.4),
 (3015, '2015-07-06', 3, 13.2, 16.3, 21.1, 25.2, 67.5, 4.1, 11.6, 10, 4.4, 0, 1005.28),
 (3015, '2015-07-07', 3, 12.1, 14.9, 23.6, 32.6, 52.88, 2.4, 18.1, 14.117, 2.2, 17.8, 999.44),
@@ -23565,7 +23565,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3028, '2015-08-08', 3, 11.6, 14.1, 19.3, 22, 88.83, 2.5, 12.4, 0.5, 6.5, 0, 1002.09),
 (3028, '2015-08-09', 3, 7.7, 10.8, 19.4, 25.5, 76.04, 1.7, 6.4, 7.167, 3.3, 0, 1001.62),
 (3028, '2015-08-10', 3, 14.7, 16, 21.8, 28.9, 74.33, 2.3, 8.9, 6.8, 5.8, 14.6, 998.04);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3028, '2015-08-11', 3, 15.6, 15.4, 18.7, 23.9, 90.38, 1.8, 5.8, 2.65, 5.8, 0, 1000.04),
 (3028, '2015-08-12', 3, 16.8, 18.3, 20.6, 24, 80.17, 2.6, 7.7, 1.067, 6.8, 0, 1002.88),
 (3028, '2015-08-13', 3, 14.7, 17.1, 23.5, 29.4, 69.92, 3.8, 13.4, 12.85, 1.1, 0, 997.6),
@@ -24152,7 +24152,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3032, '2015-09-13', 3, 14.3, 14.9, 16.1, 17.6, 95.58, 5.3, 10.1, 0.317, 7.4, 0.2, 1006.63),
 (3032, '2015-09-14', 3, 13.6, 15.2, 16, 16.7, 95.79, 6.4, 15, 0, 7.3, 3.6, 997.31),
 (3032, '2015-09-15', 3, 10, 11.7, 14.1, 15.3, 81.33, 11.6, 22.2, 4.65, 5.7, 6.9, 996.4);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3032, '2015-09-16', 3, 12.5, 12.9, 14.7, 16.8, 88.21, 8.6, 17.1, 0.25, 7.5, 2.4, 992.67),
 (3032, '2015-09-17', 3, 13, 14, 15.7, 16.9, 86.38, 11.8, 21.3, 0.8, 6.9, 0.3, 989.78),
 (3032, '2015-09-18', 3, 12.2, 13.3, 15.1, 17.6, 80.08, 7.7, 16.6, 5.383, 5.5, 2.8, 1006.81),
@@ -24735,7 +24735,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3126, '2015-10-15', 3, 5.8, 6.1, 6.6, 7.1, 98.79, 2.5, 7.7, 0, 8, 11.6, 1005.91),
 (3126, '2015-10-16', 3, 6.5, 6.7, 7.4, 8.3, 96.96, 1.2, 3.9, 0, 8, 6.4, 1006.27),
 (3126, '2015-10-17', 3, 5.6, 6.8, 7.5, 9.2, 95.63, 0.9, 3.2, 0.067, 7.9, 1.2, 1008.1);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3126, '2015-10-18', 3, 4.2, 6.3, 8.3, 11.1, 89.54, 0.9, 3.7, 0.083, 7.7, 1.2, 1008.56),
 (3126, '2015-10-19', 3, 5.4, 6.3, 7.8, 9.7, 97.96, 1.3, 5.2, 0, 7.9, 4.6, 1009.79),
 (3126, '2015-10-20', 3, 6.8, 7.8, 9.5, 11.1, 94.5, 1.6, 6.8, 0, 8, 0.1, 1010.5),
@@ -25322,7 +25322,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3196, '2015-11-20', 3, 4.5, 5.7, 7.3, 8.9, 86, 4.3, 11.8, 0.65, 7.5, 0.6, 988.92),
 (3196, '2015-11-21', 3, 1.9, 2.6, 4.4, 6.1, 90, 3.6, 9.6, 0.15, 7.7, 1.3, 982.88),
 (3196, '2015-11-22', 3, -3.9, -0.9, 0.3, 2.6, 95.17, 3.4, 10.6, 0.4, 7.3, 2.9, 989.7);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3196, '2015-11-23', 3, -5.1, -2.1, 0.8, 4.4, 88.38, 2.1, 7.3, 7.017, 5.7, 0, 1007.16),
 (3196, '2015-11-24', 3, 0.1, 0.7, 2.1, 3.8, 82.25, 4.6, 11.9, 0.35, 7.7, 0.9, 1004.77),
 (3196, '2015-11-25', 3, 0.2, 0.8, 2.5, 4.3, 99.08, 3, 8.4, 0, 8, 1.4, 993.4),
@@ -25913,7 +25913,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3231, '2015-12-30', 3, -2, -1, 1.8, 3.2, 89.79, 4.1, 12.4, 0, 7.3, 0, 974.78),
 (3231, '2015-12-31', 3, -3.6, -2.7, -1.7, -0.6, 89.46, 3.7, 8.5, 0, 7.9, 3.8, 970.32),
 (3231, '2016-01-01', 3, -0.7, -0.9, 0.1, 0.7, 100, 1.9, 5.2, 0, 8, 0, 971.43);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3231, '2016-01-02', 3, -2.8, -2.5, -1, 0, 94.46, 3.6, 9.3, 0, 7.7, 5.8, 962.49),
 (3231, '2016-01-03', 3, -2.7, -3.3, -2.2, -1, 96.54, 4, 8, 0, 7.7, 2.3, 955.08),
 (3231, '2016-01-04', 3, -3.3, -4.8, -3.4, -1.8, 95.38, 3.3, 8.7, 0, 7.7, 2, 940.65),
@@ -26504,7 +26504,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3552, '2016-02-08', 3, 1.3, 4.1, 6.3, 9.6, 80.5, 6.1, 15.7, 0.433, 5.6, 1.6, 990.67),
 (3552, '2016-02-09', 3, 4, 4.9, 7.3, 8.8, 73.96, 6.6, 18.9, 0.233, 7.6, 2.8, 984.37),
 (3552, '2016-02-10', 3, -0.4, 2.1, 4, 7.2, 82.63, 3.9, 22.9, 2.633, 7, 1.7, 985.27);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3552, '2016-02-11', 3, -1.7, 0.5, 3.9, 5.4, 86.67, 3.7, 12.7, 0.117, 6.5, 2.3, 993.89),
 (3552, '2016-02-12', 3, -2.8, -0.4, 2, 5.9, 88.17, 1.8, 7.4, 5.417, 4.8, 0, 996.76),
 (3552, '2016-02-13', 3, -4.9, -2.5, 1.5, 6.7, 86, 2.5, 9.6, 7.983, 1.5, 0, 990.96),
@@ -27089,7 +27089,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3631, '2016-03-13', 3, -1.9, -0.4, 1.6, 3.4, 89.58, 4.1, 9.7, 2.567, 5, 0, 1036.29),
 (3631, '2016-03-14', 3, -1.7, 0.2, 3.7, 6, 90.17, 2.5, 5.9, 2.85, 7.1, 0, 1033.93),
 (3631, '2016-03-15', 3, 1.7, 2.9, 4.9, 6.7, 93.33, 5.3, 11.2, 0.017, 6.9, 0, 1028.59);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3631, '2016-03-16', 3, 0.6, 2, 4.5, 7.4, 81.96, 5.8, 10.7, 11.35, 1, 0, 1031.69),
 (3631, '2016-03-17', 3, -3.5, 1.1, 4.5, 7.4, 88.25, 3.3, 9.3, 10.733, 2, 0, 1028.07),
 (3631, '2016-03-18', 3, 4.7, 4.4, 5.5, 6.7, 89.13, 7, 11.8, 0, 7.9, 0, 1019.74),
@@ -27678,7 +27678,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3660, '2016-04-20', 3, -2.3, 0.6, 7.4, 13.8, 58.96, 2.5, 8.8, 13.117, 0.7, 0, 970.39),
 (3660, '2016-04-21', 3, 0.4, 3.4, 11.5, 18.2, 46.13, 2.4, 7.3, 11.467, 5.9, 0, 964.97),
 (3660, '2016-04-22', 3, 4.4, 6.2, 9.8, 15, 60.25, 3.1, 8.8, 4.667, 7.7, 4.1, 959.8);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3660, '2016-04-23', 3, -0.5, 1.2, 3.5, 6.9, 79.96, 4.2, 12.1, 1.917, 7.4, 1.6, 955.49),
 (3660, '2016-04-24', 3, -2, -0.7, 1.4, 5.7, 80.67, 3.5, 15.7, 4, 7.6, 1.3, 955.93),
 (3660, '2016-04-25', 3, -2.9, -1.7, 1.4, 3.7, 88.79, 4, 11.6, 0.167, 7.5, 6.8, 950.72),
@@ -28271,7 +28271,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3668, '2016-06-01', 3, 12.2, 13.3, 15, 16.2, 86.21, 2.6, 8.4, 0, 7.7, 0.1, 975.29),
 (3668, '2016-06-02', 3, 11.6, 12.7, 15.7, 18.8, 85.38, 1.6, 6.2, 0.05, 7.1, 0.1, 973.86),
 (3668, '2016-06-03', 3, 12.9, 12.7, 15.6, 20.4, 87.13, 1.2, 4.3, 2.55, 7.2, 1.9, 973.88);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3668, '2016-06-04', 3, 12.3, 12.9, 18.4, 23.8, 74.46, 2, 7.2, 6.533, 6.3, 1.8, 975.22),
 (3668, '2016-06-05', 3, 12, 12.6, 17.1, 24.9, 84.67, 1.8, 9.3, 5.217, 6.5, 8.7, 979.2),
 (3668, '2016-06-06', 3, 12.2, 12.2, 18, 27.1, 78.13, 1.8, 11.1, 6.367, 5.3, 0, 982.4),
@@ -28864,7 +28864,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3730, '2016-07-13', 3, 6.6, 7.4, 11.4, 15.3, 89.08, 2.2, 7.9, 0.017, 7.7, 33.4, 923.98),
 (3730, '2016-07-14', 3, 6.2, 6.5, 8.4, 13.8, 88.67, 3, 8.1, 1.683, 7.2, 19.5, 927.18),
 (3730, '2016-07-15', 3, 4.4, 6, 10, 14.7, 86.92, 2, 9.9, 1.633, 7.5, 1.8, 932.7);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3730, '2016-07-16', 3, 3.2, 4.3, 11.7, 18.9, 72.13, 1.9, 6.2, 7.867, 3.9, 0, 933.25),
 (3730, '2016-07-17', 3, 4.1, 5.2, 15.8, 24.2, 74.04, 2, 7, 10.267, 2.5, 0, 930.98),
 (3730, '2016-07-18', 3, 8.9, 10.2, 18.7, 26.4, 69.96, 2.2, 9.8, 12.617, 1.4, 0, 930.28),
@@ -29456,7 +29456,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3761, '2016-08-23', 3, 11.3, 12.5, 20.5, 28.6, 67.5, 1.5, 5, 12.983, 0, 0, 994.78),
 (3761, '2016-08-24', 3, 13.9, 15.8, 23.3, 30.8, 58.67, 3.1, 8.5, 12.933, 0, 0, 990.78),
 (3761, '2016-08-25', 3, 14.3, 16.5, 24.2, 32, 50.42, 3, 8.4, 12.883, 0, 0, 986.55);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3761, '2016-08-26', 3, 15.6, 16.8, 24.5, 33, 56.21, 1.7, 4.8, 12.8, 0, 0, 985.7),
 (3761, '2016-08-27', 3, 14.6, 17, 25.9, 34.3, 55.63, 1.8, 5.3, 12.6, 0, 0, 985.58),
 (3761, '2016-08-28', 3, 16, 18.1, 25.1, 32.6, 55.63, 2.7, 10.7, 8.633, 2.7, 1.8, 983.92),
@@ -30043,7 +30043,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (3987, '2016-09-28', 3, 7.7, 11.4, 16.5, 20.7, 69, 6.2, 14.6, 0.117, 6.4, 0, 1009.52),
 (3987, '2016-09-29', 3, 12.2, 15.1, 20.1, 25.3, 57.13, 5.4, 12.9, 5.483, 6.4, 0, 1002.63),
 (3987, '2016-09-30', 3, 6.5, 10.6, 15.4, 20.4, 73.75, 4.1, 12.5, 2.8, 6.8, 0.1, 1001.43);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (3987, '2016-10-01', 3, 5.7, 9.3, 12.4, 14.5, 93.42, 3, 7.4, 0, 7.7, 6.2, 999.12),
 (3987, '2016-10-02', 3, 5.6, 8.3, 12.5, 17.3, 89.79, 3.4, 11.5, 7.7, 3.3, 1.8, 1000.34),
 (3987, '2016-10-03', 3, 3.8, 6.6, 11.8, 17.7, 80.63, 3.2, 8.7, 8.367, 4, 4.8, 1009.3),
@@ -30637,7 +30637,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4104, '2016-11-10', 1, -0.2, 1.2, 3.4, 5.5, 94.29, 3.4, 11.4, 0.033, 6.5, 6.2, 963.6),
 (4104, '2016-11-11', 1, 1.2, 1.6, 3.7, 5, 95.33, 2.5, 10.8, 0, 7.6, 6.8, 968.95),
 (4104, '2016-11-12', 1, -3.6, -1.7, 0.8, 3.1, 88.46, 2.1, 6.7, 0.017, 7.4, 0, 979.19);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4104, '2016-11-13', 1, -6.7, -4.6, -1.6, 2.8, 86.17, 1.7, 5, 2.983, 3.5, 0, 982.94),
 (4104, '2016-11-14', 1, -7.6, -5.4, -1.5, 4.5, 81.63, 1.9, 6.7, 8.133, 0.8, 0, 987.9),
 (4104, '2016-11-15', 1, -7.8, -5.4, -1.2, 2, 93.29, 2.4, 7.3, 0, 6, 10.5, 985.3),
@@ -31225,7 +31225,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4271, '2015-06-16', 3, 11.1, 11.4, 12.7, 14.2, 63.25, 7.5, 11.6, 4.55, 5.6, 0, 1020.59),
 (4271, '2015-06-17', 3, 10.7, 11.4, 14, 18.1, 70.54, 4.9, 9.8, 4.55, 6.5, 1.6, 1018.18),
 (4271, '2015-06-18', 3, 11, 11.4, 13.6, 15.3, 83.71, 8.1, 16.5, 0.6, 7.5, 7.2, 1009.25);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4271, '2015-06-19', 3, 9.8, 10.3, 12.7, 15.3, 81.17, 9.3, 14.9, 3.083, 7.2, 6.8, 1009.37),
 (4271, '2015-06-20', 3, 11.2, 12.2, 13.9, 16.3, 83.33, 7.9, 12.7, 6.6, 5.8, 6.1, 1012.85),
 (4271, '2015-06-21', 3, 10.8, 11.8, 13.2, 15.3, 75.04, 4.9, 12.1, 5.717, 6.8, 1.9, 1012.78),
@@ -31808,7 +31808,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4336, '2015-07-18', 3, 15.6, 17.1, 22.3, 28.6, 72.71, 2.8, 9.8, 3.917, 5.5, 0.1, 979.64),
 (4336, '2015-07-19', 3, 14.8, 17.4, 21.5, 27.4, 74.63, 4.7, 15.8, 1.833, 6.3, 2.6, 975.22),
 (4336, '2015-07-20', 3, 14.5, 16.5, 21.9, 28.4, 74.21, 3.5, 10.8, 1.317, 6.1, 0.2, 977.84);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4336, '2015-07-21', 3, 14.4, 16.8, 24.3, 32.1, 63.54, 2.7, 9.8, 11.017, 1.6, 0, 978.39),
 (4336, '2015-07-22', 3, 15.4, 17.7, 24.7, 32.1, 59.71, 3.1, 10.3, 8.683, 5.1, 0, 977.35),
 (4336, '2015-07-23', 3, 12.6, 14.9, 20.7, 26.6, 52.75, 2.5, 12, 6.133, 5.6, 0, 979.4),
@@ -32400,7 +32400,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4466, '2015-08-28', 3, 8.9, 11.6, 15, 20, 89.71, 3.3, 11.7, 6.983, 3.9, 2, 1009.42),
 (4466, '2015-08-29', 3, 9, 10.5, 16, 21.1, 78.75, 2.7, 7.7, 7.733, 5.1, 0, 1016.48),
 (4466, '2015-08-30', 3, 11.4, 12.7, 17, 21, 79.63, 2.5, 7.5, 2.133, 6.9, 0, 1013.88);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4466, '2015-08-31', 3, 15.6, 16.1, 18, 22.8, 93.21, 2.9, 14.2, 3.267, 7.1, 11.7, 1005.98),
 (4466, '2015-09-01', 3, 10.6, 12.2, 16.4, 18.4, 91.71, 4.5, 12.6, 0.167, 6.1, 0.1, 1001.38),
 (4466, '2015-09-02', 3, 10.7, 11.6, 14.4, 18.1, 84, 4.7, 15.2, 7.533, 4, 4.6, 1005.71),
@@ -32985,7 +32985,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4625, '2015-10-01', 3, 1.6, 5.2, 10.5, 17.2, 83.67, 2.1, 5.4, 10.567, 4.2, 0, 1025.55),
 (4625, '2015-10-02', 3, 1.6, 5.2, 9.3, 16.5, 91.63, 1.9, 6.3, 4.95, 6.1, 0, 1019.33),
 (4625, '2015-10-03', 3, 0.4, 2.9, 10.4, 18, 84.54, 1.8, 6.1, 8.917, 5.5, 0, 1009.92);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4625, '2015-10-04', 3, 4.4, 7.8, 12.2, 18.3, 84.46, 2.8, 7.7, 8.8, 3.8, 0, 1007.48),
 (4625, '2015-10-05', 3, 3.5, 6.3, 11.6, 18, 86.54, 2.3, 7.6, 4.617, 5.3, 0, 1008.93),
 (4625, '2015-10-06', 3, 9.8, 10.7, 13.5, 16, 83.25, 4.9, 12.7, 0.283, 6.3, 1.2, 1002.76),
@@ -33574,7 +33574,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4887, '2015-11-08', 3, 6.7, 11.7, 14, 16.8, 87.08, 3.2, 9.5, 5.567, 3.7, 0, 942.65),
 (4887, '2015-11-09', 3, 8.9, 10, 13.1, 15.8, 72.25, 8.2, 18.5, 1.25, 3.9, 0, 940.69),
 (4887, '2015-11-10', 3, 4.6, 8.4, 10.8, 14.8, 68.21, 6.3, 14.8, 6.667, 4.1, 0, 941.13);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4887, '2015-11-11', 3, 0.1, 4.8, 8.6, 12.2, 78.04, 3, 6.5, 8.567, 2.3, 0, 940.23),
 (4887, '2015-11-12', 3, 1.3, 4.6, 7.8, 12.5, 85.79, 3, 8.1, 6.533, 4, 0, 940.68),
 (4887, '2015-11-13', 3, 0.9, 5.3, 8.3, 10, 80.29, 5.2, 19.7, 3.967, 5.8, 1.4, 939.5),
@@ -34167,7 +34167,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4911, '2015-12-20', 3, 2.5, 2.3, 3.8, 5.4, 97.92, 3.6, 7, 0, 7.7, 0, 982.13),
 (4911, '2015-12-21', 3, -1.6, 0, 2.7, 6, 96.75, 2.8, 6.2, 0, 6, 3.1, 984.84),
 (4911, '2015-12-22', 3, -0.1, 1.4, 5.7, 12.5, 92.21, 2.1, 5.2, 2.933, 4.1, 0, 986.8);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4911, '2015-12-23', 3, -3.7, -1.8, 4.1, 8.2, 91.13, 2.2, 5.8, 4.4, 3.8, 0, 986.76),
 (4911, '2015-12-24', 3, 0.6, 2.4, 5.6, 9.8, 90.25, 1.7, 4.6, 6.967, 4.4, 0, 985.28),
 (4911, '2015-12-25', 3, -1, 1.3, 4.4, 9.7, 88.5, 2.2, 5.2, 6.733, 2.3, 0, 988.61),
@@ -34760,7 +34760,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (4931, '2016-01-31', 3, 2, 2.9, 5.2, 11.7, 88.13, 3.2, 11.5, 0, 7.8, 3.9, 968.19),
 (4931, '2016-02-01', 3, 7.5, 9, 11.4, 13, 74.38, 5.5, 14.7, 0, 7.2, 0, 975.5),
 (4931, '2016-02-02', 3, 5.2, 6.1, 9.8, 11.7, 71.58, 4.6, 14.2, 0.767, 7, 0.9, 974.29);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (4931, '2016-02-03', 3, -1.3, 1, 3.9, 6.2, 81.83, 3.9, 15.1, 0.367, 6.8, 3.5, 973.74),
 (4931, '2016-02-04', 3, -0.9, 1, 2.6, 4.8, 85.79, 4.3, 14.7, 0.283, 7.4, 5.3, 978.3),
 (4931, '2016-02-05', 3, -3.3, 2.2, 5.9, 10.2, 83.29, 2.4, 7.7, 3.367, 6, 0, 979.66),
@@ -35353,7 +35353,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5100, '2016-03-13', 3, 0.2, 1.5, 4.6, 9.6, 69.63, 6.3, 15, 6.483, NULL, 0, 996.91),
 (5100, '2016-03-14', 3, -2.1, 0.9, 4.1, 9.8, 63.04, 5, 11.8, 8.133, NULL, 0, 996.16),
 (5100, '2016-03-15', 3, -4.3, -1.4, 3.6, 8.9, 68.58, 3.7, 12.2, 1.717, NULL, 0.1, 992.09);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5100, '2016-03-16', 3, 1.1, 2.1, 4.5, 7.7, 61.75, 6.6, 17.8, 2.05, NULL, 0, 991.33),
 (5100, '2016-03-17', 3, -2.2, 0, 6, 13.2, 57.96, 4.8, 9.7, 11.283, NULL, 0, 992.4),
 (5100, '2016-03-18', 3, -4.9, -1.7, 6, 15, 64.96, 2.6, 10.9, 10.683, 0.3, 0, 988.55),
@@ -35945,7 +35945,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5371, '2016-04-23', 3, -3.8, -2.8, 0.4, 4.8, 85.08, 6.2, 13.9, 1.017, 7.1, 4.6, 902.96),
 (5371, '2016-04-24', 3, -3.7, -3.6, -1.9, 2.6, 90.58, 4.9, 13.6, 3.267, 7.3, 2.8, 902.77),
 (5371, '2016-04-25', 3, -3.5, -3.8, -1.7, 2.9, 93.04, 7.8, 20.4, 1.35, 7.7, 13.5, 899.45);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5371, '2016-04-26', 3, -3.5, -3.5, -1.8, 0.2, 91.5, 7.6, 17.1, 1.75, 7.1, 2.9, 892.97),
 (5371, '2016-04-27', 3, -3.4, -3.3, -1.9, -0.3, 95.92, 11, 21.6, 0, 8, 2.1, 897.82),
 (5371, '2016-04-28', 3, -3.1, -2.6, -0.5, 3.1, 84.58, 5.2, 10.6, 4.133, 5.2, 0.4, 905.75),
@@ -36540,7 +36540,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5397, '2016-06-06', 3, 8.8, 10.5, 17, 26.4, NULL, NULL, NULL, 8.9, NULL, 0.2, NULL),
 (5397, '2016-06-07', 3, 6.7, 11.4, 18.6, 25.3, 59.83, 1.6, 7, 12.467, 1, 0, 970.6),
 (5397, '2016-06-08', 3, 6.3, 10.7, 15.8, 23.3, 81.21, 1.6, 10.7, 6.617, 4, 4.2, 967.18);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5397, '2016-06-09', 3, 5.6, 10.3, 15.7, 20.6, 71.29, 2.5, 7.3, 8.65, 4, 0, 964.68),
 (5397, '2016-06-10', 3, 3.9, 8.2, 15.6, 22, 66.92, 1.7, 6.3, 11.683, 1.9, 0, 961.72),
 (5397, '2016-06-11', 3, 8.1, 10.9, 14.8, 20.2, 81.83, 0.9, 5.2, 0.567, 5.8, 4.3, 960.3),
@@ -37127,7 +37127,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5516, '2016-07-12', 3, 14.8, 15.5, 17.9, 20.3, 77.58, 7.5, 16.3, 9.683, 4.9, 5.9, 1008.03),
 (5516, '2016-07-13', 3, 14, 15.3, 16.5, 18, 72.92, 4.1, 10.4, 4.617, 6.6, 0, 1011.3),
 (5516, '2016-07-14', 3, 13.5, 14.8, 16.1, 17.9, 76.67, 8.8, 16.6, 7.217, 7.5, 0, 1012.52);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5516, '2016-07-15', 3, 13.8, 14.7, 15.7, 17.2, 76.83, 12.1, 17.6, 1, 7.6, 0, 1017.06),
 (5516, '2016-07-16', 3, 11.5, 11.9, 16.5, 18.8, 84.38, 6.2, 10.9, 0.75, 7.8, 0.1, 1019.42),
 (5516, '2016-07-17', 3, 14.5, 14.7, 16.3, 18.3, 81.71, 5.8, 12.9, 4.033, 6.6, 0.6, 1017.46),
@@ -37715,7 +37715,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5705, '2016-08-18', 3, 7.4, 9.6, 18.3, 26.2, 61.46, 1.8, 8, 10.383, 2.9, 0, 979.14),
 (5705, '2016-08-19', 3, 12.9, 14.4, 20.6, 27.1, 70.29, 2.4, 8.4, 7.5, 4.1, 0, 980.23),
 (5705, '2016-08-20', 3, 11.8, 12.8, 19.1, 24.5, 77.54, 2.8, 8.9, 3.3, 6.1, 1.9, 983.3);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5705, '2016-08-21', 3, 11.2, 12.3, 16.1, 21.5, 77.46, 4.1, 15.6, 6.05, 5.1, 0.3, 988.75),
 (5705, '2016-08-22', 3, 9.9, 12.2, 17.1, 22.9, 74.29, 3.1, 9.8, 6.533, 5.2, 0, 995.54),
 (5705, '2016-08-23', 3, 12, 14.1, 20.5, 28.2, 67.5, 1.5, 8.4, 11.767, 1.7, 0, 995.6),
@@ -38300,7 +38300,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5792, '2016-09-21', 3, NULL, -3.4, -1.7, 2.4, 70.42, 3, 9.1, 12.167, 1, 0, 710.4),
 (5792, '2016-09-22', 3, NULL, -2.4, -0.4, 4.6, 64.79, 5, 12.3, 11.867, 3.3, 0, 714),
 (5792, '2016-09-23', 3, NULL, -3.6, -1.3, 0, 97.83, 5.6, 13, 2.15, 6, 0, 717.2);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5792, '2016-09-24', 3, NULL, -3.4, 1.6, 4.6, 65.33, 4.1, 10.9, 11.883, 2.3, 0, 718.36),
 (5792, '2016-09-25', 3, NULL, -0.7, 2.1, 4.8, 66.54, 3.8, 9.9, 9.317, 4, 0, 716.38),
 (5792, '2016-09-26', 3, NULL, -1.6, 0, 1.8, 86.5, 4.2, 11.9, 4.9, 4.3, 0, 715.8),
@@ -38883,7 +38883,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5839, '2016-10-23', 3, -2.3, 1.6, 6.4, 9.9, 94.13, 2.1, 6.5, 0.6, 6.9, 0.9, 1014.28),
 (5839, '2016-10-24', 3, -2, 1.5, 5.9, 8.4, 93.5, 3.7, 8.5, 0.483, 7.7, 0, 1016.44),
 (5839, '2016-10-25', 3, -3.4, -1.4, 6, 11.7, 89.75, 1.9, 5.6, 6.95, 4, 0, 1023.72);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5839, '2016-10-26', 3, -3.2, -1.6, 5.4, 10.9, 91.54, 2.6, 7.5, 1.167, 7.8, 0, 1028.13),
 (5839, '2016-10-27', 3, 9.1, 10.3, 12, 14.5, 90.25, 3.7, 9.3, 1.667, 7.1, 0, 1028.6),
 (5839, '2016-10-28', 3, 6.7, 9.2, 12.2, 14.3, 89.75, 4.3, 10.8, 0.117, 7.8, 0, 1029.03),
@@ -39475,7 +39475,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5871, '2015-06-02', 3, 6.6, 8.2, 15.5, 21.6, 63.71, 6.1, 14.4, 7.65, 5, 0, 956.93),
 (5871, '2015-06-03', 3, 4.2, 11, 15.3, 19.5, 70.54, 5.3, 12.7, 7.267, 3.8, 0, 963.14),
 (5871, '2015-06-04', 3, 5.2, 9.8, 16.9, 23.2, 56.13, 3.2, 10.8, 14.583, 1.6, 0, 966.38);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5871, '2015-06-05', 3, 9.8, 14.4, 22.7, 29.7, 51.75, 4.6, 12.5, 13.583, 1.6, 19.4, 961.3),
 (5871, '2015-06-06', 3, 10.7, 12.5, 18.1, 22.6, 80.75, 3.6, 10.4, 9.483, 4.4, 0, 964.06),
 (5871, '2015-06-07', 3, 7.8, 9.8, 14.7, 19.7, 58.04, 3.4, 8.9, 14, 3.5, 0, 968.2),
@@ -40066,7 +40066,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (5906, '2015-07-12', 3, 12.5, 14, 21.7, 28.8, 52.79, 2.7, 10.1, 8.833, 4.3, 0.2, 1006.36),
 (5906, '2015-07-13', 3, 17.1, 17.3, 20.3, 23, 63.13, 2.6, 8.9, 0.95, 7.8, 0.4, 1006.65),
 (5906, '2015-07-14', 3, 16.1, 18.1, 22.8, 28.3, 62.25, 3.2, 10.7, 2.033, 7.2, 0, 1005.97);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (5906, '2015-07-15', 3, 15, 17.8, 23.4, 30.5, 58.96, 1.7, 5.5, 8.95, 4.2, 0, 1007.2),
 (5906, '2015-07-16', 3, 16.1, 17.8, 25.7, 33.9, 52.96, 1.8, 7.2, 14.15, 2.5, 0, 1005.08),
 (5906, '2015-07-17', 3, 16.9, 18.3, 27.2, 35.7, 50.13, 3, 10.2, 7.283, 6, 3.2, 1002.75),
@@ -40653,7 +40653,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (7341, '2015-08-17', 3, 13.9, 14.5, 15.3, 16.4, 86.58, 2.5, 6.9, 0, 7.9, 0.8, 998.36),
 (7341, '2015-08-18', 3, 12.3, 13.7, 16.7, 20.6, 75, 1.5, 5, 0.05, 7.8, 0, 1001.08),
 (7341, '2015-08-19', 3, 8.8, 9.8, 17.1, 22.2, 69.88, 1.1, 4.5, 5.333, 7, 0, 1005.88);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (7341, '2015-08-20', 3, 12.3, 13.8, 17, 22.4, 80.46, 1.3, 4.9, 3.033, 7.3, 6.4, 1009.32),
 (7341, '2015-08-21', 3, 9.9, 11, 18.3, 26.1, 67.71, 1.3, 6.4, 12.467, 5.8, 0, 1009.63),
 (7341, '2015-08-22', 3, 9.5, 10.8, 19.2, 27.5, 57.25, 1.5, 8.1, 12.3, 5.9, 0, 1004.48),
@@ -41240,7 +41240,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 (15000, '2015-09-22', 3, 7.1, 8.4, 11.4, 15.3, 93.63, 4.7, 12, 1.1, 6.4, 10.9, 975.11),
 (15000, '2015-09-23', 3, 8.4, 8.9, 10.8, 12, 98.92, 5.1, 11.6, 0, 7, 12.5, 982.23),
 (15000, '2015-09-24', 3, 8.4, 9.6, 12.9, 17.2, 84.21, 6.3, 15.2, 4.283, 6, 0.4, 989.97);
-INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
+INSERT INTO `pocasi_data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_2m`, `max_2m`, `humidity`, `mid_wind`, `max_wind`, `sun_length`, `mid_cloud`, `precipitation`, `mid_air_pressure`) VALUES
 (15000, '2015-09-25', 3, 5.2, 10.2, 12.5, 16.2, 85.25, 3.3, 8.4, 4.5, 6.6, 0.1, 994.65),
 (15000, '2015-09-26', 3, 2.9, 7, 10.7, 14.8, 87.38, 2.1, 7.4, 2.767, 6.3, 0, 999.15),
 (15000, '2015-09-27', 3, 1.8, 5.5, 10.4, 16.2, 83.25, 3.5, 9.6, 8.583, 1, 0, 1004.23),
@@ -41680,7 +41680,7 @@ INSERT INTO `data` (`Stations_ID`, `date`, `quality`, `min_5cm`, `min_2m`, `mid_
 -- Struktura tabulky `station`
 --
 
-CREATE TABLE `station` (
+CREATE TABLE `pocasi_station` (
   `S_ID` int(11) NOT NULL,
   `place` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `geo_latitude` double(6,3) DEFAULT NULL,
@@ -41694,7 +41694,7 @@ CREATE TABLE `station` (
 -- Vypisuji data pro tabulku `station`
 --
 
-INSERT INTO `station` (`S_ID`, `place`, `geo_latitude`, `geo_longtitude`, `height`, `operator`, `bundesland`) VALUES
+INSERT INTO `pocasi_station` (`S_ID`, `place`, `geo_latitude`, `geo_longtitude`, `height`, `operator`, `bundesland`) VALUES
 (102, 'Leuchtturm Alte Weser', 53.862, 8.127, 32, 'DWD', 11),
 (164, 'Angermünde', 53.032, 13.991, 54, 'DWD', 4),
 (183, 'Arkona', 54.679, 13.434, 42, 'DWD', 8),
@@ -41779,19 +41779,19 @@ INSERT INTO `station` (`S_ID`, `place`, `geo_latitude`, `geo_longtitude`, `heigh
 --
 -- Klíče pro tabulku `bundesland`
 --
-ALTER TABLE `bundesland`
+ALTER TABLE `pocasi_bundesland`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Klíče pro tabulku `data`
 --
-ALTER TABLE `data`
+ALTER TABLE `pocasi_data`
   ADD PRIMARY KEY (`Stations_ID`,`date`);
 
 --
 -- Klíče pro tabulku `station`
 --
-ALTER TABLE `station`
+ALTER TABLE `pocasi_station`
   ADD PRIMARY KEY (`S_ID`);
 
 --
@@ -41801,7 +41801,7 @@ ALTER TABLE `station`
 --
 -- AUTO_INCREMENT pro tabulku `bundesland`
 --
-ALTER TABLE `bundesland`
+ALTER TABLE `pocasi_bundesland`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- Omezení pro exportované tabulky
@@ -41810,8 +41810,8 @@ ALTER TABLE `bundesland`
 --
 -- Omezení pro tabulku `data`
 --
-ALTER TABLE `data`
-  ADD CONSTRAINT `data_ibfk_1` FOREIGN KEY (`Stations_ID`) REFERENCES `station` (`S_ID`);
+ALTER TABLE `pocasi_data`
+  ADD CONSTRAINT `data_ibfk_1` FOREIGN KEY (`Stations_ID`) REFERENCES `pocasi_station` (`S_ID`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

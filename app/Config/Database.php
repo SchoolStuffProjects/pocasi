@@ -31,7 +31,7 @@ class Database extends Config
         'password'     => '',
         'database'     => 'kalisz',
         'DBDriver'     => 'MySQLi',
-        'DBPrefix'     => '',
+        'DBPrefix'     => 'pocasi_',
         'pConnect'     => false,
         'DBDebug'      => true,
         'charset'      => 'utf8',

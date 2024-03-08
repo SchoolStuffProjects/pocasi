@@ -35,4 +35,10 @@ class Kontroler extends BaseController
         //$data['currentStationName'] = $this->spolkZeme->find($idStation)->quality;
         echo view('individualniStanice', $data);
     }
+
+    public function getIndividualBundeslandObr($idbundesland){
+        $data['name'] = $this->spolkZeme->find($idbundesland)->name;
+        $data['Station'] = $this->Station->where('bundesland', $idbundesland)->findAll();
+        echo view('kartaSpolkZemeObr', $data);
+    }
 }

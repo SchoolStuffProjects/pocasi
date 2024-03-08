@@ -1,14 +1,14 @@
 <?php
 $this->extend('layout/template');
 $this->section('content');
-echo "<h1>Seznam spolkových zemí - </h1>";
+echo "<h1>Seznam spolkových zemí</h1>";
 
 $table = new \CodeIgniter\View\Table();
 
 $table->setHeading(['id', 'name', 'short_name']);
 
 foreach($spolkZeme as $row) {
-    $table->addRow($row -> id, anchor('kartaSpolkZeme/'.$row -> id, $row -> name), $row -> short_name);
+    $table->addRow($row -> id, anchor('kartaSpolkZeme/'.$row -> id, $row -> name), anchor('kartaSpolkZemeObr/'.$row -> id, $row -> short_name));
 }
 
 $template = [

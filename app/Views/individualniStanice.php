@@ -11,7 +11,8 @@ echo "<h1>Seznam měření v dané stanici</h1>";
 $table->setHeading(['quality', 'date', 'humidity', 'max_wind', 'sun_length']);
 
 foreach($currentStation as $row) {
-    $table->addRow($row -> quality, $row -> date, $row -> humidity, $row -> max_wind, $row -> sun_length);
+    $formattedDate = date('j.n.Y', strtotime($row->date));
+    $table->addRow($row -> quality, $formattedDate, $row -> humidity, $row -> max_wind, $row -> sun_length);
 }
 
 $template = [
