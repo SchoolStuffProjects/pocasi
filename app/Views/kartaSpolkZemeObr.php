@@ -3,31 +3,25 @@
 <?=$this->section("content");?>
 
 <div class="container-fluid">
-    <h1>Mapa a vlajka dané spolkové země - <?= $name ?> </h1>
-    <div class = "row"> 
+    <h1>Mapa a vlajka dané spolkové země - <?= $Info->name ?> </h1>
     <?php 
-        helper('html');
-        $img = [
-            'src' => '',
-            'width'  => '200',
-            'height' => '200',
+    $cesta_map = 'pocasi_assets/obrazky/mapy/';
+    $cesta_flag = 'pocasi_assets/obrazky/vlajky/';
+
+        $imgMap = [
+            'src' => $cesta_map.$Info->mapa,
+            'width' => '25%'
         ];
 
-        foreach ($Station as $row){
+        $imgFlag = [
+            'src' => $cesta_flag.$Info->vlajka,
+            'width' => '25%'
+        ];
     ?>
-            <div class = "col-xxl-3 col-sm-12 col-lg-6">
-                <div class="card m-5">
-                    <h4 class="card-title text-center mt-2"><?= anchor('individualniStanice/'.$row->S_ID, $row->place) ?></h4>
-                <div class="card-body">
-                    <?= img($img); ?>
-                    <p class="card-text text-center"> Zeměpisná šířka: <?= $row->geo_latitude ?></p>
-                    <p class="card-text text-center"> Zeměpisná délka: <?= $row->geo_longtitude ?></p>
-                    <p class="card-text text-center"> Nadmořská výška: <?= $row->height ?> m n.m</p>
-                </div>
-             </div>
-            </div>
-        <?php } ?>
-    </div>
+        <div class ="img-fluid text-center">
+            <?= img($imgMap); ?>
+            <?= img($imgFlag); ?>
+        </div>
 </div>
 
 <?=$this->endSection();?>

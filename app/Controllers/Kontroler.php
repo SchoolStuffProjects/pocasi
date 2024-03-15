@@ -37,8 +37,7 @@ class Kontroler extends BaseController
     }
 
     public function getIndividualBundeslandObr($idbundesland){
-        $data['name'] = $this->spolkZeme->find($idbundesland)->name;
-        $data['Station'] = $this->Station->where('bundesland', $idbundesland)->findAll();
+        $data['Info'] = $this->spolkZeme->find($idbundesland);
         echo view('kartaSpolkZemeObr', $data);
     }
 }
