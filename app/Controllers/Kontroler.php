@@ -32,12 +32,16 @@ class Kontroler extends BaseController
 
     public function getIndividualStation($idStation){
         $data['currentStation'] = $this->currentStation->where('Stations_ID', $idStation)->findAll();
-        //$data['currentStationName'] = $this->spolkZeme->find($idStation)->quality;
         echo view('individualniStanice', $data);
     }
 
     public function getIndividualBundeslandObr($idbundesland){
         $data['Info'] = $this->spolkZeme->find($idbundesland);
         echo view('kartaSpolkZemeObr', $data);
+    }
+
+    public function getAllstations(){
+        $data['VsechnyStation'] = $this->Station->join('bundesland', 'bundesland.id = Station.bundesland','inner')->findAll();
+        echo view('kartaVsechStanic', $data);
     }
 }
